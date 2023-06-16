@@ -1,0 +1,134 @@
+Part 1 - Getting started - What have i learned?
+
+Source code consist of statements and expressions that are read by the compile from top to bottom, left to right.
+
+The statements always ends with a semicolon;
+
+
+Part 2 - Printing - What have i learned?
+
+I learned how to use the print function on java, and how it can be used multiple times to print multiple texts that i would like to print. The command used to print is: System.out.println("Text here");
+
+I learned that i cant type "sout" and press tab ant it will automatically change to System.out.println on netbeans, i don't know if this works on others IDE's But i hope so, it saves a lot of time.
+
+I also learned how to use comments on the code.
+
+
+Part 3 - Reading input - What have i learned?
+
+I learned that java has a built-in tool to read input. To use this tool, we need to add "import java.util.Scanner; before the beginning of the main(). 
+
+The scanner itself need to be instanced like this: "Scanner scanner = new scanner (System.in); 
+
+To scan a input, you need to: 
+1) Instance the Scanner;
+2) Print a text or something like that asking for the user input
+3) Scan the data assigning it to a variable, like this : String message = scanner.nextLine(); (In this case, the variable is "message")
+4 (Optional)) Print the data stored on the variable, like this : sout(message);  
+
+
+String is a shorthand for "String of characters", that is how the computer sees text on a more fundamental level: a sequence of individual characters.
+
+A String variable is declared in a program by first declaring it's type (String) and right after, the variable name (something) (String something;). You can assign a value to the variable using the equal sign, like this: String something = "Hello world";
+
+When a variable is created, it can be referenced later. Variables are referenced by their name.
+
+Don't put quotation marks when trying to print a variable, the program will treat the variable like a literal string and it won't work.
+
+I also learned that i can concatenate the string, either concatenated multiple strings (sout("bla bla" + "bla bla bla" + "blablabla");) or strings and variables (sout("bla bla" + message);)
+
+When the program execution comes to a statement that attempts to read a input from the user, the program will be stopped and will wait till the input is given. It will happen every time. 
+
+
+Part 4 - Variables - What have i learned?
+
+I learned that values can be assigned to a variable using "=" sign. Ex: int number = 50
+
+You can't have two variables with the same name, variable names are unique
+
+You can change the variable value, the just use "variable = newvalue". Keep in mind that you only need to declare the variable type on the first time you assign a value to the variable. 
+
+A variable can only hold one value at a time. A variable can't change it's type once is declared.
+
+The type of variable inform it's possible values.
+
+The Integer.valueOf command converts a string to a number. It takes the string containing the value to be converted as a parameter.
+
+Ex:
+String valueAsString = "42";
+Int value = Integer.ValueOf(valueAsString);
+System.out.println(value);
+Result = 42
+
+When using a Scanner object, the reading of the value is usually inserted directly into the type conversion. 
+
+Ex:
+(..)
+int value = Integer.valueOf(scanner.nextLine());
+
+I can also convert String to Double using the command "Double.valueOf(stringvariable);"
+
+I can also convert a string to a Boolean value. Boolean only accepts "true" or "false". When converting a String to Boolean, if we want the value to be true, the string must be "true", case insensitive. Every other String that it's not "true" that's being converted will return false.
+
+Finally, a summary:
+
+import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        int integer = Integer.valueOf(scanner.nextLine());
+        double floatingPoint = Double.valueOf(scanner.nextLine());
+        boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
+
+        // and so on
+    }
+}
+
+
+Part 5 - Calculation with numbers - What have i learned?
+
+I learned that calculations on programming works same way as anywhere else, there's precedence, left to right, operations in parentheses first. Operations within parentheses are performed before those outside them.
+
+An expression is a combination of values that is turned into another value through a calculation or evaluation
+
+The evaluation (calculations) of a expression is always performed before the value is assigned to a variable.
+
+On the division, if the dividend or divisor is float, the result will be a float number. If both are integers, the result will be a integer.
+
+A integer can be converted to a float by placing a type-casting operation before it (double)
+
+Ex: int first = 3;
+int second = 2;
+double result1 = (double) first / second;
+System.out.println(result1); // prints 1.5
+
+You can also convert a integer to a float by multiplying it with a float number prior the execution of the division.
+
+An "if" statement is not followed by a semicolon since the statement doesn't end after the conditional.
+
+
+Part 6 - Conditional statements and conditional operations - What have i learned?
+
+A code block is a piece of code that is inside a pair of curly brackets. All curly brackets must have a matching pair.
+
+A conditional statement begin with the keyword "if" and right after, the condition is placed between parenthesis. Th parenthesis is followed by a block of code "{ code here }". If the "if" statement that is inside the parenthesis is true, the program will execute the block of code inside the curl braces. 
+
+I learned indentation. Also learned comparison operators.
+
+I learned how to use if, else, and else-if.
+
+The comparisons are executed top down. When the execution reaches a statement that is true, the block is executed and the comparison stops.
+
+comparison operators can be used outside if statements
+
+I learned how to use the modulo operator "%" to check if a number is divisible by another number, and to check if the number is even or odd
+
+I also learned that you cannot compare two strings using "==" like you do with Integers, floats and booleans. To compare two strings, we need to use the "equals" command. If we are comparing two String variables to check if the have the same value, we use "first.equals(second)". If not, we use "input.equals("String")"
+
+I also learned what are the logical operators: "AND = &&", "OR = ||" and "NOT = !"
+
+The NOT operator can use to flip the result of a expression.
+
+I also learned that execution order of conditional statements matter. You must learn what is the most demanding condition and implement it first.
